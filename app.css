@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat, Arial, Helvetica, sans-serif;
+    background: rgb(245, 239, 239);
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+[class*="reveal-"]{
+    opacity: 0;
+    transform: translateY(-30%);
+}
+
+.reveal-1{
+    transition-delay: .1s;
+}
+.reveal-2{
+    transition-delay: .2s;
+}
+.reveal-3{
+    transition-delay: .3s;
+}
+
+.reveal-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5,0,0,1);
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.navigation-top{
+    background-color: #0b041e;
+    color: white;
+    padding: 15px 0;
+    z-index: 500;
+}
+
+.navigation-logo{
+    font-size: 28px;
+    font-weight: 900;
+    color: #4783f2;
+
+}
+
+.navigation-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+ul.navigation-flex{
+    gap: 30px;
+}
+ul.navigation-flex li{
+    font-weight: 500;
+    transition: color .3s;
+}
+ul.navigation-flex li:hover{
+    color: #4783f2;
+}
+
+.navigation-btn{
+    background: #4783f2;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.link-blog{
+    position: relative;
+}
+.link-blog:hover > .sub-menu{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.sub-menu{
+    opacity: 0;
+    border: 5px solid #4783f2;
+    pointer-events: none;
+    position: absolute;
+    background: #0b041e;
+    top: 45px;   
+    width: 600px;
+    left: 50%;
+    transform: translate(-45%);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+    gap: 20px;
+    z-index: 6000;
+}
+
+.sub-menu h3{
+    padding: 20px 0;
+}
+
+.sub-menu-title{
+    padding-bottom: 10px;
+    color: #4783f2;
+}
+
+.sub-menu-list li{
+    padding-bottom: 6px;
+    list-style: disc;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.main{
+    margin-top: 20px;
+    z-index: 30;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.card-body{
+    background: #ffffff;
+    padding: 10px;
+}
+
+.card-body h3{
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+.card-img img{
+    width: 100%;
+}
